@@ -5,7 +5,7 @@
 [![Downloads](https://img.shields.io/packagist/dt/captainhook/hook-installer.svg?v1)](https://packagist.org/packages/captainhook/hook-installer)
 [![License](https://poser.pugx.org/captainhook/hook-installer/license.svg?v=1)](https://packagist.org/packages/captainhook/hook-installer)
 
-*HookInstaller* is a *Composer* plugin for [CaptainHook](https://github.com/captainhookphp/captainhook) it takes
+*HookInstaller* is a *Composer* plugin for [CaptainHook](https://github.com/captainhook-git/captainhook) it takes
 care of activating your local git hooks after `composer install` or `composer update`.
 If you want to make sure your teammates activate their hooks, install this plugin
 and you don't have to remind them anymore.
@@ -20,7 +20,7 @@ As this is a *Composer* plugin you should use *Composer* to install it.
 $ composer require --dev captainhook/hook-installer
 ```
 For this to work you must have `CaptainHook` installed already.
-If you need help installing `CaptainHook` have a look at the Captain´s [README](https://github.com/captainhookphp/captainhook)
+If you need help installing `CaptainHook` have a look at the Captain´s [README](https://github.com/captainhook-git/captainhook)
 
 Everything else should happen automagically.
 

@@ -24,7 +24,7 @@ use RuntimeException;
  *
  * @package CaptainHook\Plugin
  * @author  Sebastian Feldmann <sf@sebastian-feldmann.info>
- * @link    https://github.com/captainhookphp/hook-installer
+ * @link    https://github.com/captainhook-git/hook-installer
  */
 class ComposerPlugin implements PluginInterface, EventSubscriberInterface
 {
@@ -290,7 +290,7 @@ class ComposerPlugin implements PluginInterface, EventSubscriberInterface
             '</comment>' . PHP_EOL .
             '  If you are uninstalling CaptainHook, we are sad seeing you go, ' . PHP_EOL .
             '  but we would appreciate your feedback on your experience.' . PHP_EOL .
-            '  Just go to https://github.com/captainhookphp/captainhook/issues to leave your feedback' . PHP_EOL .
+            '  Just go to https://github.com/captainhook-git/captainhook/issues to leave your feedback' . PHP_EOL .
             PHP_EOL
         );
     }
