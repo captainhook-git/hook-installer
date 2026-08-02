@@ -58,11 +58,14 @@ class DotGit
             return;
         }
         // additional worktree with a .git file referencing the original .git directory
+        // The referenced path is not required to be named '.git'; a worktree of a
+        // bare repository, or of one created with --separate-git-dir, points at a
+        // directory with any name. is_dir() below is the actual validation.
         if (is_file($pathToDotGit)) {
             $dotGitContent = file_get_contents($pathToDotGit);
             $match         = [];
-            preg_match('#^gitdir: (?<gitdir>.*\.git)#', $dotGitContent, $match);
-            $dir = $match['gitdir'] ?? '';
+            preg_match('#^gitdir:\s*(?<gitdir>.+)$#m', $dotGitContent, $match);
+            $dir = rtrim($match['gitdir'] ?? '');
             if (is_dir($dir)) {
                 $this->gitDir               = $dir;
                 $this->isAdditionalWorktree = true;
