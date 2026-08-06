@@ -1,3 +1,4 @@
 /vendor/
-.idea
-composer.lock
+/tools/
+/composer.lock
+/.cs-check.json
