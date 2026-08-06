@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of CaptainHook.
  *
@@ -7,6 +8,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
+
 declare(strict_types=1);
 
 namespace CaptainHook\HookInstaller;
@@ -146,8 +148,10 @@ class ComposerPlugin implements PluginInterface, EventSubscriberInterface
             return;
         }
 
+        $config = $this->relativePath($this->configuration);
+
         $this->io->write('  - Detect executable: <comment>' . $this->executable . '</comment>');
-        $this->io->write('  - Detect configuration: <comment>' . $this->relativePath($this->configuration) . '</comment>');
+        $this->io->write('  - Detect configuration: <comment>' . $config . '</comment>');
         $this->io->write('  - Install hooks: ', false);
         $this->install();
         $this->io->write('<comment>done</comment>');
@@ -279,7 +283,7 @@ class ComposerPlugin implements PluginInterface, EventSubscriberInterface
             '  <comment>CaptainHook executable not found</comment>' . PHP_EOL .
             PHP_EOL .
             '  Make sure you have installed <info>CaptainHook</info> .' . PHP_EOL .
-            '  If you installed the Cap\'n to a custom location you have to configure the path ' .PHP_EOL .
+            '  If you installed the Cap\'n to a custom location you have to configure the path ' . PHP_EOL .
             '  to your CaptainHook executable using Composers \'extra\' config. e.g.' . PHP_EOL .
             PHP_EOL . '<comment>' .
             '    "extra": {' . PHP_EOL .
@@ -306,7 +310,7 @@ class ComposerPlugin implements PluginInterface, EventSubscriberInterface
             '  <comment>CaptainHook configuration not found</comment>' . PHP_EOL .
             PHP_EOL .
             '  If your CaptainHook configuration is not named <info>captainhook.json</info> or is not' . PHP_EOL .
-            '  located in your repository root you have to configure the path to your' .PHP_EOL .
+            '  located in your repository root you have to configure the path to your' . PHP_EOL .
             '  CaptainHook configuration using Composers \'extra\' config. e.g.' . PHP_EOL .
             PHP_EOL .
             '    <comment>"extra": {' . PHP_EOL .
