@@ -26,5 +26,10 @@
     "psr-4": {
       "CaptainHook\\HookInstaller\\": "src"
     }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "CaptainHook\\HookInstaller\\": "tests/unit/"
+    }
   }
 }
