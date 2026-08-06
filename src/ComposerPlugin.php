@@ -107,7 +107,7 @@ class ComposerPlugin implements PluginInterface, EventSubscriberInterface
     /**
      * Make sure the installer is executed after the autoloader is created
      *
-     * @return array
+     * @return array<string, string>
      */
     public static function getSubscribedEvents(): array
     {
@@ -177,7 +177,7 @@ class ComposerPlugin implements PluginInterface, EventSubscriberInterface
     private function detectGitDir(): void
     {
         try {
-            $this->dotGit = DotGit::searchInPath(getcwd());
+            $this->dotGit = DotGit::searchInPath((string) getcwd());
         } catch (RuntimeException $e) {
             throw new RuntimeException($this->pluginErrorMessage($e->getMessage()));
         }

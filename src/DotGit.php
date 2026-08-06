@@ -62,7 +62,7 @@ class DotGit
         // bare repository, or of one created with --separate-git-dir, points at a
         // directory with any name. is_dir() below is the actual validation.
         if (is_file($pathToDotGit)) {
-            $dotGitContent = file_get_contents($pathToDotGit);
+            $dotGitContent = (string) file_get_contents($pathToDotGit);
             $match         = [];
             preg_match('#^gitdir:\s*(?<gitdir>.+)$#m', $dotGitContent, $match);
             $dir = rtrim($match['gitdir'] ?? '');

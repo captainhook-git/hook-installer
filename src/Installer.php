@@ -91,8 +91,8 @@ class Installer
         // Loop on process until it exits
         do {
             $status = proc_get_status($process);
-        } while ($status && $status['running']);
-        $exitCode = $status['exitcode'] ?? -1;
+        } while ($status['running']);
+        $exitCode = $status['exitcode'];
         proc_close($process);
         if ($exitCode !== 0) {
             throw new RuntimeException('installation process failed');
