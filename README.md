@@ -4,6 +4,7 @@
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%208.0-8892BF.svg)](https://php.net/)
 [![Downloads](https://img.shields.io/packagist/dt/captainhook/hook-installer.svg?v1)](https://packagist.org/packages/captainhook/hook-installer)
 [![License](https://poser.pugx.org/captainhook/hook-installer/license.svg?v=1)](https://packagist.org/packages/captainhook/hook-installer)
+[![Continuous Integration](https://github.com/captainhook-git/hook-installer/actions/workflows/integration.yml/badge.svg)](https://github.com/captainhook-git/hook-installer/actions/workflows/integration.yml)
 
 *HookInstaller* is a *Composer* plugin for [CaptainHook](https://github.com/captainhook-git/captainhook) it takes
 care of activating your local git hooks after `composer install` or `composer update`.
